@@ -25,7 +25,7 @@ You need to have **Docker** installed. Here is the [official guide](https://docs
  docker compose down --rmi local -v # stops the containers and removes associated volumes and locally built images.
 
  # To test the deployed website 
- for i in {1..100}; do curl http://127.0.0.1:8000/; done;
+ for i in {1..10}; do curl http://127.0.0.1:8000/; done;
 ```
 
 Or, once running, access to your website on the following address: `http://localhost:8000`.
