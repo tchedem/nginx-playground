@@ -36,3 +36,8 @@ Or, once running, access to your website on the following address: `http://local
 - `website` : Contain the static website content (HTML, CSS, JS files)
 - `docker-compose.yml` : A Docker Compose yaml file to run the containerized website. While not strictly necessary for asingle Nginx container, I decided to include it for convenience to manage ports, volumes, and service configuration easily.
 - `static.localhost.conf` : a standard Nginx Virtual host configuration file that routes the incoming requests to the correct directory of our static website. - *If you are not used to Nginx, I recommend you to try it out on a new installed Virtual Machine.* 
+
+
+---
+
+2025_10_09
