@@ -1,8 +1,8 @@
-#### Static Website with Docker & Nginx
+## Static Website with Docker & Nginx
 
 This directory contans everythings you need to build and run a static website using Docker and Nginx.
 
-###### Feature 
+### Feature 
 
 Uses Nginx as Webserver/Reverse Proxy to serve static content.
 
@@ -12,7 +12,7 @@ Designed to be lightweight and easy to extend.
 
 Configurable via Docker Compose.
 
-###### How to Run
+### How to Run
 
 ***Pre-requisites***
 You need to have **Docker** installed. Here is the [official guide](https://docs.docker.com/get-started/get-docker/).
@@ -31,7 +31,7 @@ You need to have **Docker** installed. Here is the [official guide](https://docs
 Or, once running, access to your website on the following address: `http://localhost:8000`.
 
 
-###### Structure
+### Structure
 
 - `website` : Contain the static website content (HTML, CSS, JS files)
 - `docker-compose.yml` : A Docker Compose yaml file to run the containerized website. While not strictly necessary for asingle Nginx container, I decided to include it for convenience to manage ports, volumes, and service configuration easily.
