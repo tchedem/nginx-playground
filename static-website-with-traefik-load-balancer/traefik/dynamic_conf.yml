@@ -1,0 +1,31 @@
+http:
+  routers:
+    mysite:
+      rule: "Host(`localhost`)"
+      service: mysite_service
+      # entryPoints:
+      #   - web 
+
+  services:
+    mysite_service:
+      # The default supported load balancing strategy is "wrr" (Weighted Round Robin)
+      # Other strategies like "lc" (Least Connection), "Least Response Time" are not yet officially suported"
+      loadBalancer:
+
+        servers:
+          - url: "http://nginx-web-1:80"
+            weight: 1
+          - url: "http://nginx-web-2:80"
+            weight: 1
+
+        # This is useful for session based applications. It add a cookie to lock the user to a specific backend server.
+        # sticky:
+        #   cookie:
+        #     name: "mysite-sticky"
+        #     secure: false   # true if using HTTPS
+        #     httpOnly: true
+
+        healthCheck:
+          path: /health
+          interval: 5s
+          timeout: 2s
