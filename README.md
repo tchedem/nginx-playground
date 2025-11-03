@@ -3,6 +3,14 @@
 A collection of hands-on examples for experimenting with and understanding NGINX configurations.  
 Each subproject is self-contained and comes with its own well-documented `README.md`.
 
+# Setup
+
+Clone the repository
+
+```bash
+git clone https://github.com/tchedem/nginx-playground.git
+```
+
 ## Available Projects
 
 - [**static-website**](./static-website) 
