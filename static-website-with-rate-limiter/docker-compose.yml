@@ -1,0 +1,24 @@
+---
+
+services:
+
+  nginx-web:
+    build: .
+    container_name: nginx_web
+    volumes:
+      - ./website:/var/www/html:ro # mount host website1 folder in /var/www/html of container
+      # - ./static.localhost.conf:/etc/nginx/conf.d/static.localhost.conf:ro
+      - ./nginx-virtualhosts:/etc/nginx/conf.d:ro
+    restart: unless-stopped
+    ports:
+      - "80:80" # this is for the web entrypoint
+    networks:
+      - webnet
+
+networks:
+  webnet:
+    # driver: bridge
+    # attachable: true
+
+# volumes:
+#   # site_data:
